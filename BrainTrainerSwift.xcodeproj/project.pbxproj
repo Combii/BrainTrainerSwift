@@ -54,6 +54,9 @@
 		E31BEDAD225B3FFF005D1AEA /* BrainTrainerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E31BEDC3225B5B8F005D1AEA /* View */,
+				E31BEDC1225B5B7F005D1AEA /* Model */,
+				E31BEDC0225B5B77005D1AEA /* Controller */,
 				E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */,
 				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
 				E31BEDB2225B3FFF005D1AEA /* Main.storyboard */,
@@ -62,6 +65,27 @@
 				E31BEDBA225B4000005D1AEA /* Info.plist */,
 			);
 			path = BrainTrainerSwift;
+			sourceTree = "<group>";
+		};
+		E31BEDC0225B5B77005D1AEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E31BEDC1225B5B7F005D1AEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E31BEDC3225B5B8F005D1AEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
