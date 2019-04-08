@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         runTimer()
+        NumberGenerator().data.valueByPropertyName("returnDict")
     }
     
     func runTimer() {
