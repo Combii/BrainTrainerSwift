@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var isTimerRunning = false
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        
+        runTimer()
     }
     
     func runTimer() {
