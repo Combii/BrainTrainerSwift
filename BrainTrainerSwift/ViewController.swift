@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
+    @IBOutlet weak var timer: UITextField!
+    
+    @IBOutlet weak var score: UITextField!
+    
     @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
