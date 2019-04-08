@@ -58,8 +58,6 @@
 				E31BEDC1225B5B7F005D1AEA /* Model */,
 				E31BEDC0225B5B77005D1AEA /* Controller */,
 				E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */,
-				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
-				E31BEDB2225B3FFF005D1AEA /* Main.storyboard */,
 				E31BEDB5225B4000005D1AEA /* Assets.xcassets */,
 				E31BEDB7225B4000005D1AEA /* LaunchScreen.storyboard */,
 				E31BEDBA225B4000005D1AEA /* Info.plist */,
@@ -70,6 +68,7 @@
 		E31BEDC0225B5B77005D1AEA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,6 +83,7 @@
 		E31BEDC3225B5B8F005D1AEA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E31BEDB2225B3FFF005D1AEA /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
