@@ -78,13 +78,13 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="timerLabel" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Timer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJU-L8-L7m">
-                                <rect key="frame" x="637" y="30" width="58" height="30"/>
+                                <rect key="frame" x="736" y="30" width="58" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Score" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-b4-Fch">
-                                <rect key="frame" x="0.0" y="24" width="59" height="30"/>
+                                <rect key="frame" x="41.5" y="24" width="59" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -101,8 +101,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qc-4y-Xb6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJU-L8-L7m" secondAttribute="trailing" multiplier="1.2" id="BKE-eB-ekN"/>
-                            <constraint firstItem="Ygt-b4-Fch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" multiplier="1.2" id="BvJ-ak-FVE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJU-L8-L7m" secondAttribute="centerX" multiplier="1.09" id="BKE-eB-ekN"/>
+                            <constraint firstItem="Ygt-b4-Fch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.1" id="BvJ-ak-FVE"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Caq-IN-hrk"/>
                             <constraint firstItem="Ygt-b4-Fch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VTM-8E-eHw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="WJU-L8-L7m" secondAttribute="top" multiplier="0.8" id="cOF-AZ-AOm"/>
