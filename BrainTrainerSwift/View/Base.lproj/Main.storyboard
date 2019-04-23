@@ -112,7 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bt1" destination="Hsl-lU-w5e" id="EIe-b9-wyS"/>
+                        <outlet property="bt1" destination="xee-El-zq0" id="ezG-e3-gvT"/>
                         <outlet property="bt2" destination="Hsl-lU-w5e" id="zf3-Cu-i1J"/>
                         <outlet property="bt3" destination="N96-UZ-1ZN" id="ods-dA-GBS"/>
                         <outlet property="bt4" destination="Yw3-QT-THt" id="tTB-Qn-sqE"/>
