@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UITextField!
     
     
-    @IBOutlet weak var score: UITextField!
+    @IBOutlet weak var score: UILabel!
     
     var seconds = 60
     var timer = Timer()
@@ -28,11 +28,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var bt1: UIButton!
     
     @IBOutlet weak var questionProblemLabel: UILabel!
- 
-    
+    var amountOfQuestionsCounter = 0
+    var correctQuestionsCounter = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        score.text = "0/\(String(amountOfQuestionsCounter))"
+
         //runTimer()
         newQuestion()
     }
@@ -82,13 +85,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
+        
+        amountOfQuestionsCounter = amountOfQuestionsCounter + 1
+        
         if(numberGenerator.isPickedCorrect(picked: Int(sender.titleLabel!.text!)!)){
             print("CORRECT!")
+            correctQuestionsCounter = correctQuestionsCounter + 1
+            score.text = "\(correctQuestionsCounter) / \(String(amountOfQuestionsCounter))"
         }
         else{
+            score.text = "\(correctQuestionsCounter) / \(String(amountOfQuestionsCounter))"
             print("FALSE!")
         }
-            
+        
+        
         newQuestion()
     }
     
