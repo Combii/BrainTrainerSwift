@@ -11,36 +11,46 @@ import Darwin
 
 struct NumberGenerator{
     
-    var returnDict: [String: Int]?
+    var numbersDictionary: [String: Int]?
     var questionProblem: String
     var correctAnswer: Int
-
+    
+    var maxNumber: Int
+    
     init() {
-        returnDict = ["1": 0, "2": 0, "3": 0, "4": 0]
+        numbersDictionary = ["1": 0, "2": 0, "3": 0, "4": 0]
         questionProblem = ""
         correctAnswer = 0
+        maxNumber = 10
         
-        generateNumber()
-        questionProblem = generateQuestion()
+        generateNumbers()
+        questionProblem = generateNewQuestion()
         
-        print(returnDict!)
+        print(numbersDictionary!)
         print(questionProblem)
     }
     
-    mutating func generateNumber() {
+    mutating func generateNumbers() {
     
-        returnDict?.forEach({ (arg) -> Void in
+        numbersDictionary?.forEach({ (arg) -> Void in
             
             let (key, _) = arg
-            returnDict?[key] = Int.random(in: 1 ... 10)
+            
+            numbersDictionary?[key] = Int.random(in: 1 ... 10)
         })
     }
     
-    mutating func generateQuestion() -> String{
+    mutating func generateNewQuestion() -> String   {
         
-        
-        if let numberResult = returnDict![String(Int.random(in: 1 ... 4))]{
+        return generateSubtractionQuestion()
 
+        //return generateAdditionQuestion()
+    }
+    
+    mutating func generateAdditionQuestion() -> String   {
+        
+        if let numberResult = numbersDictionary![String(Int.random(in: 1 ... 4))]{
+            
             print("RESULT NUMBER: \(numberResult)")
             
             let toSubtract = numberResult - Int.random(in:1...numberResult)
@@ -53,8 +63,24 @@ struct NumberGenerator{
         return ""
     }
     
-    func isCorrect(picked: Int) -> Bool {
+    mutating func generateSubtractionQuestion() -> String   {
+        
+        if let numberResult = numbersDictionary![String(Int.random(in: 1 ... 4))]{
+            
+            print("RESULT NUMBER: \(numberResult)")
+            
+            let toAdd = numberResult + Int.random(in:numberResult...maxNumber)
+            let added = numberResult + toAdd;
+            
+            correctAnswer = numberResult
+            
+            return "\(added) - \(toAdd)"
+        }
+        return ""
+    }
     
+    func isPickedCorrect(picked: Int) -> Bool {
+        
         if(picked == correctAnswer){
             return true
         }

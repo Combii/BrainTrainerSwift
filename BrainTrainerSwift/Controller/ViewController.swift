@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         numberGenerator = NumberGenerator()
         
         questionProblemLabel.text = numberGenerator.questionProblem
-        setNumbers(numberDic: numberGenerator.returnDict!)
+        setNumbers(numberDic: numberGenerator.numbersDictionary!)
     }
     
     func setNumbers(numberDic: Dictionary<String, Int>) {
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClicked(_ sender: UIButton) {
-        if(numberGenerator.isCorrect(picked: Int(sender.titleLabel!.text!)!)){
+        if(numberGenerator.isPickedCorrect(picked: Int(sender.titleLabel!.text!)!)){
             print("CORRECT!")
         }
         else{
