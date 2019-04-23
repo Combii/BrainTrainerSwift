@@ -44,10 +44,19 @@ class ViewController: UIViewController {
     
     func setNumbers(numberDic: Dictionary<String, Int>) {
         
+        let btns = [bt1, bt2, bt3, bt4]
+        
+        UIView.performWithoutAnimation {
+            for (position, number) in numberDic {
+                btns[(Int(position) ?? 0) - 1]?.setTitle(String(number), for: .normal)
+            }
+        }
+        
+        /*
         for (position, number) in numberDic {
             if(Int(position) == 1){
                 UIView.performWithoutAnimation {
-                    bt1.titleLabel?.text = String(number)
+                    bt1.setTitle(String(number), for: .normal)
                 }
             }
             else if(Int(position) == 2){
@@ -66,7 +75,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
+        */
         
     }
     
@@ -86,6 +95,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClicked(_ sender: UIButton) {
+      
         newQuestion()
     }
     
