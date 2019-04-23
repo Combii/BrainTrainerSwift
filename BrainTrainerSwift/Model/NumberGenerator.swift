@@ -39,14 +39,14 @@ struct NumberGenerator{
     mutating func generateQuestion() -> String{
         
         
-        if let randomNumber = returnDict![String(Int.random(in: 1 ... 4))]{
+        if let numberResult = returnDict![String(Int.random(in: 1 ... 4))]{
 
-            print(randomNumber)
+            print("RESULT NUMBER: \(numberResult)")
             
-            let toSubtract = randomNumber - Int.random(in:1...randomNumber)
-            let subtractred = randomNumber - toSubtract;
+            let toSubtract = numberResult - Int.random(in:1...numberResult)
+            let subtractred = numberResult - toSubtract;
             
-            correctAnswer = randomNumber
+            correctAnswer = numberResult
             
             return "\(subtractred) + \(toSubtract)"
         }
