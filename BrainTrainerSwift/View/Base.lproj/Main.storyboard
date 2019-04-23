@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4vG-GB-Pbk">
                                         <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="147.33333333333334"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-QT-THt">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-QT-THt" userLabel="bt4">
                                                 <rect key="frame" x="0.0" y="0.0" width="186.33333333333334" height="147.33333333333334"/>
                                                 <color key="backgroundColor" red="0.1137254902" green="0.60784313729999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -35,7 +35,7 @@
                                                     <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1e6-Tc-QbU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N96-UZ-1ZN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N96-UZ-1ZN" userLabel="bt3">
                                                 <rect key="frame" x="186.33333333333331" y="0.0" width="186.33333333333331" height="147.33333333333334"/>
                                                 <color key="backgroundColor" red="0.1137254902" green="0.60784313729999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-zx-bcZ">
-                                <rect key="frame" x="369" y="162" width="30" height="30"/>
+                                <rect key="frame" x="115" y="82" width="184" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=":0)"/>
                                 <connections>
@@ -112,6 +112,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bt1" destination="xee-El-zq0" id="q9m-iG-gh3"/>
+                        <outlet property="bt2" destination="Hsl-lU-w5e" id="zf3-Cu-i1J"/>
+                        <outlet property="bt3" destination="N96-UZ-1ZN" id="ods-dA-GBS"/>
+                        <outlet property="bt4" destination="Yw3-QT-THt" id="tTB-Qn-sqE"/>
                         <outlet property="btn" destination="Hsl-lU-w5e" id="zBb-Ik-ayd"/>
                         <outlet property="score" destination="Ygt-b4-Fch" id="VLa-uW-x9A"/>
                         <outlet property="timerLabel" destination="WJU-L8-L7m" id="49I-Gh-FgC"/>
@@ -119,6 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="104.34782608695653"/>
         </scene>
     </scenes>
 </document>

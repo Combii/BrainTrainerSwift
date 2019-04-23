@@ -20,9 +20,44 @@ class ViewController: UIViewController {
     var timer = Timer()
     var isTimerRunning = false
     
+    @IBOutlet weak var bt4: UIButton!
+    @IBOutlet weak var bt3: UIButton!
+    @IBOutlet weak var bt2: UIButton!
+    @IBOutlet weak var bt1: UIButton!
+    
+    
     @IBAction func startButtonPressed(_ sender: UIButton) {
         runTimer()
-        NumberGenerator().data.valueByPropertyName("returnDict")
+        let dict = NumberGenerator().returnDict!
+        setNumbers(numberDic: dict)
+    }
+    
+    func setNumbers(numberDic: Dictionary<String, Int>) {
+        
+        for (position, number) in numberDic {
+            if(Int(position) == 1){
+                UIView.performWithoutAnimation {
+                    bt1.titleLabel?.text = String(number)
+                }
+            }
+            else if(Int(position) == 2){
+                UIView.performWithoutAnimation {
+                    bt2.titleLabel?.text = String(number)
+                }
+                
+            }
+            else if(Int(position) == 3){
+                UIView.performWithoutAnimation {
+                    bt3.titleLabel?.text = String(number)
+                }            }
+            else if(Int(position) == 4){
+                UIView.performWithoutAnimation {
+                    bt4.titleLabel?.text = String(number)
+                }
+            }
+        }
+        
+        
     }
     
     func runTimer() {
