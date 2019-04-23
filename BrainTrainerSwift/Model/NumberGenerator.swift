@@ -13,14 +13,17 @@ struct NumberGenerator{
     
     var returnDict: [String: Int]?
     var questionProblem: String
+    var correctAnswer: Int
 
     init() {
         returnDict = ["1": 0, "2": 0, "3": 0, "4": 0]
         questionProblem = ""
+        correctAnswer = 0
+        
         generateNumber()
         questionProblem = generateQuestion()
         
-        print(returnDict)
+        print(returnDict!)
         print(questionProblem)
     }
     
@@ -29,7 +32,7 @@ struct NumberGenerator{
         returnDict?.forEach({ (arg) -> Void in
             
             let (key, _) = arg
-            returnDict?[key] = Int.random(in: 0 ... 10)
+            returnDict?[key] = Int.random(in: 1 ... 10)
         })
     }
     
@@ -40,12 +43,22 @@ struct NumberGenerator{
 
             print(randomNumber)
             
-            var toSubtract = randomNumber - Int.random(in:0...randomNumber)
-            var subtractred = randomNumber - toSubtract;
+            let toSubtract = randomNumber - Int.random(in:1...randomNumber)
+            let subtractred = randomNumber - toSubtract;
             
-            return "\(subtractred) + \(toSubtract) = \(randomNumber)"
+            correctAnswer = randomNumber
+            
+            return "\(subtractred) + \(toSubtract)"
         }
         return ""
+    }
+    
+    func isCorrect(picked: Int) -> Bool {
+    
+        if(picked == correctAnswer){
+            return true
+        }
+        return false
     }
     
 }

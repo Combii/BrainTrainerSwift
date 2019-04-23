@@ -89,15 +89,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-zx-bcZ">
-                                <rect key="frame" x="115" y="82" width="184" height="104"/>
-                                <state key="normal" title=":0)"/>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hc8-MA-tDa"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY3-U3-SQy">
-                                <rect key="frame" x="186.33333333333334" y="76" width="41.666666666666657" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Problem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY3-U3-SQy">
+                                <rect key="frame" x="138.66666666666666" y="76" width="136.99999999999997" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,7 +99,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qc-4y-Xb6"/>
-                            <constraint firstItem="DY3-U3-SQy" firstAttribute="centerX" secondItem="MAC-zx-bcZ" secondAttribute="centerX" id="8dT-ez-urs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJU-L8-L7m" secondAttribute="centerX" multiplier="1.15" id="BKE-eB-ekN"/>
                             <constraint firstItem="Ygt-b4-Fch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.1" id="BvJ-ak-FVE"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Caq-IN-hrk"/>

@@ -52,17 +52,16 @@ class ViewController: UIViewController {
             }
             else if(Int(position) == 2){
                 UIView.performWithoutAnimation {
-                    bt2.titleLabel?.text = String(number)
+                    bt2.setTitle(String(number), for: .normal)
                 }
-                
             }
             else if(Int(position) == 3){
                 UIView.performWithoutAnimation {
-                    bt3.titleLabel?.text = String(number)
+                    bt3.setTitle(String(number), for: .normal)
                 }            }
             else if(Int(position) == 4){
                 UIView.performWithoutAnimation {
-                    bt4.titleLabel?.text = String(number)
+                    bt4.setTitle(String(number), for: .normal)
                 }
             }
         }
@@ -86,7 +85,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClicked(_ sender: UIButton) {
-      
+        if(numberGenerator.isCorrect(picked: Int(sender.titleLabel!.text!)!)){
+            print("CORRECT!")
+        }
+        else{
+            print("FALSE!")
+        }
+            
         newQuestion()
     }
     
