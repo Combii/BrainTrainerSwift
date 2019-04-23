@@ -19,6 +19,9 @@ struct NumberGenerator{
         questionProblem = ""
         generateNumber()
         questionProblem = generateQuestion()
+        
+        print(returnDict)
+        print(questionProblem)
     }
     
     mutating func generateNumber() {
@@ -35,7 +38,6 @@ struct NumberGenerator{
         
         if let randomNumber = returnDict![String(Int.random(in: 1 ... 4))]{
 
-            
             print(randomNumber)
             
             var toSubtract = randomNumber - Int.random(in:0...randomNumber)

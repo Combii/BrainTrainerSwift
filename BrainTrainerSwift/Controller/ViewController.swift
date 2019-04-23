@@ -20,16 +20,26 @@ class ViewController: UIViewController {
     var timer = Timer()
     var isTimerRunning = false
     
+    var numberGenerator = NumberGenerator()
+    
     @IBOutlet weak var bt4: UIButton!
     @IBOutlet weak var bt3: UIButton!
     @IBOutlet weak var bt2: UIButton!
     @IBOutlet weak var bt1: UIButton!
     
+    @IBOutlet weak var questionProblemLabel: UILabel!
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         runTimer()
-        let dict = NumberGenerator().returnDict!
-        setNumbers(numberDic: dict)
+        setNumbers(numberDic: numberGenerator.returnDict!)
+        newQuestion()
+    }
+    
+    func newQuestion() {
+        
+        questionProblemLabel.text = numberGenerator.questionProblem
+
+        
     }
     
     func setNumbers(numberDic: Dictionary<String, Int>) {

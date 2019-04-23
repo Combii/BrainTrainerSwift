@@ -89,23 +89,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-zx-bcZ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAC-zx-bcZ">
                                 <rect key="frame" x="115" y="82" width="184" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=":0)"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hc8-MA-tDa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY3-U3-SQy">
+                                <rect key="frame" x="186.33333333333334" y="76" width="41.666666666666657" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qc-4y-Xb6"/>
+                            <constraint firstItem="DY3-U3-SQy" firstAttribute="centerX" secondItem="MAC-zx-bcZ" secondAttribute="centerX" id="8dT-ez-urs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJU-L8-L7m" secondAttribute="centerX" multiplier="1.15" id="BKE-eB-ekN"/>
                             <constraint firstItem="Ygt-b4-Fch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.1" id="BvJ-ak-FVE"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Caq-IN-hrk"/>
+                            <constraint firstItem="DY3-U3-SQy" firstAttribute="centerX" secondItem="urd-au-mup" secondAttribute="centerX" id="E4z-wr-7eW"/>
                             <constraint firstItem="Ygt-b4-Fch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VTM-8E-eHw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="WJU-L8-L7m" secondAttribute="top" multiplier="0.8" id="cOF-AZ-AOm"/>
+                            <constraint firstItem="DY3-U3-SQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="eff-Pj-D2b"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="kx9-md-g1r"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="x2n-za-uvz"/>
                         </constraints>
@@ -117,6 +125,7 @@
                         <outlet property="bt3" destination="N96-UZ-1ZN" id="ods-dA-GBS"/>
                         <outlet property="bt4" destination="Yw3-QT-THt" id="tTB-Qn-sqE"/>
                         <outlet property="btn" destination="Hsl-lU-w5e" id="zBb-Ik-ayd"/>
+                        <outlet property="questionProblemLabel" destination="DY3-U3-SQy" id="XsK-1U-OE3"/>
                         <outlet property="score" destination="Ygt-b4-Fch" id="VLa-uW-x9A"/>
                         <outlet property="timerLabel" destination="WJU-L8-L7m" id="49I-Gh-FgC"/>
                     </connections>
