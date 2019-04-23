@@ -112,11 +112,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bt1" destination="xee-El-zq0" id="q9m-iG-gh3"/>
+                        <outlet property="bt1" destination="Hsl-lU-w5e" id="EIe-b9-wyS"/>
                         <outlet property="bt2" destination="Hsl-lU-w5e" id="zf3-Cu-i1J"/>
                         <outlet property="bt3" destination="N96-UZ-1ZN" id="ods-dA-GBS"/>
                         <outlet property="bt4" destination="Yw3-QT-THt" id="tTB-Qn-sqE"/>
-                        <outlet property="btn" destination="Hsl-lU-w5e" id="zBb-Ik-ayd"/>
                         <outlet property="questionProblemLabel" destination="DY3-U3-SQy" id="XsK-1U-OE3"/>
                         <outlet property="score" destination="Ygt-b4-Fch" id="VLa-uW-x9A"/>
                         <outlet property="timerLabel" destination="WJU-L8-L7m" id="49I-Gh-FgC"/>

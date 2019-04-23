@@ -28,9 +28,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var bt1: UIButton!
     
     @IBOutlet weak var questionProblemLabel: UILabel!
+ 
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        runTimer()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //runTimer()
         newQuestion()
     }
     
@@ -78,12 +81,6 @@ class ViewController: UIViewController {
         timerLabel.text = "\(seconds)" //This will update the label.
     }
     
-    @IBOutlet weak var btn: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     @IBAction func btnClicked(_ sender: UIButton) {
         if(numberGenerator.isPickedCorrect(picked: Int(sender.titleLabel!.text!)!)){
             print("CORRECT!")
