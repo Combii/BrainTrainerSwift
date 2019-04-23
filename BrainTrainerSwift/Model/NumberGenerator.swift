@@ -54,9 +54,14 @@ struct NumberGenerator{
     
     mutating func generateNewQuestion() -> String   {
         
-        return generateSubtractionQuestion()
-
-        //return generateAdditionQuestion()
+        let randomTypePicker = Int.random(in:0...1)
+        
+        if(randomTypePicker == 0){
+            return generateSubtractionQuestion()
+        }
+        else{
+            return generateAdditionQuestion()
+        }
     }
     
     mutating func generateAdditionQuestion() -> String   {
