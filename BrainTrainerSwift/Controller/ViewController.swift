@@ -31,15 +31,15 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         runTimer()
-        setNumbers(numberDic: numberGenerator.returnDict!)
         newQuestion()
     }
     
     func newQuestion() {
+       
+        numberGenerator = NumberGenerator()
         
         questionProblemLabel.text = numberGenerator.questionProblem
-
-        
+        setNumbers(numberDic: numberGenerator.returnDict!)
     }
     
     func setNumbers(numberDic: Dictionary<String, Int>) {
@@ -86,9 +86,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnClicked(_ sender: UIButton) {
-        
-        print(sender.titleLabel!.text!)
-        
+        newQuestion()
     }
     
 }
