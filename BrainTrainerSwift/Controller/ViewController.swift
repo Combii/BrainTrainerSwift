@@ -44,15 +44,6 @@ class ViewController: UIViewController {
     
     func setNumbers(numberDic: Dictionary<String, Int>) {
         
-        let btns = [bt1, bt2, bt3, bt4]
-        
-        UIView.performWithoutAnimation {
-            for (position, number) in numberDic {
-                btns[(Int(position) ?? 0) - 1]?.setTitle(String(number), for: .normal)
-            }
-        }
-        
-        /*
         for (position, number) in numberDic {
             if(Int(position) == 1){
                 UIView.performWithoutAnimation {
@@ -75,7 +66,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        */
+        
         
     }
     
