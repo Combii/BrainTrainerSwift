@@ -36,7 +36,19 @@ struct NumberGenerator{
             
             let (key, _) = arg
             
-            numbersDictionary?[key] = Int.random(in: 1 ... 10)
+            var numberExists = false
+            
+            var randomNumber = Int.random(in: 1 ... maxNumber)
+            numberExists = (numbersDictionary?.values.contains(randomNumber))!
+        
+            //Ensures there will be no duplicates
+            while(numberExists){
+                if(numberExists){
+                    randomNumber = Int.random(in: 1 ... maxNumber)
+                    numberExists = (numbersDictionary?.values.contains(randomNumber))!
+                }
+            }
+             numbersDictionary?[key] = randomNumber
         })
     }
     
