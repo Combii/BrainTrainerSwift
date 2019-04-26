@@ -10,6 +10,8 @@ import UIKit
 
 class DifficultyController: UIViewController {
 
+    var difficultySelected = "TEST"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,22 +20,21 @@ class DifficultyController: UIViewController {
     
     @IBAction func ClickedOnButton(_ sender: UIButton) {
     
-        let difficultySelected = sender.titleLabel!.text!
+        difficultySelected = sender.titleLabel!.text!
     
         if(difficultySelected == "Hard"){
-            sendDifficultyToGame(difficulty: "Hard")
+            sendDifficultyToGame()
         }
         else if(difficultySelected == "Medium"){
-            sendDifficultyToGame(difficulty: "Medium")
+            sendDifficultyToGame()
         }
         else if(difficultySelected == "Easy"){
-            sendDifficultyToGame(difficulty: "Easy")
+            sendDifficultyToGame()
         }
         
     }
     
-    func sendDifficultyToGame(difficulty:String
-        ) {
+    func sendDifficultyToGame() {
         performSegue(withIdentifier: "goToGame", sender: self)
     }
     
@@ -43,7 +44,7 @@ class DifficultyController: UIViewController {
             
             let destinationVC = segue.destination as! ViewController
             
-            //destinationVC.textPassedOver = textField.text!
+            destinationVC.difficultyPassedOver = difficultySelected
             
         }
     }

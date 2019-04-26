@@ -12,8 +12,10 @@ class ViewController: UIViewController {
    
 
     @IBOutlet weak var timerLabel: UILabel!
-    
     @IBOutlet weak var score: UILabel!
+    
+    var difficultyPassedOver : String?
+
     
     var seconds = 60
     var timer = Timer()
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
         
         runTimer()
         newQuestion()
+        
+        print("!!!!difficultyPassedOver!!!!! : " + difficultyPassedOver!)
     }
     
     func newQuestion() {
