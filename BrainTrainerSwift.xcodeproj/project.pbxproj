@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3179A0F22733C6D00147625 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3179A0E22733C6D00147625 /* DifficultyController.swift */; };
 		E31BEDAF225B3FFF005D1AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */; };
 		E31BEDB1225B3FFF005D1AEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDB0225B3FFF005D1AEA /* ViewController.swift */; };
 		E31BEDB4225B3FFF005D1AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB2225B3FFF005D1AEA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3179A0E22733C6D00147625 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		E31BEDAB225B3FFF005D1AEA /* BrainTrainerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTrainerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E31BEDB0225B3FFF005D1AEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
+				E3179A0E22733C6D00147625 /* DifficultyController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3179A0F22733C6D00147625 /* DifficultyController.swift in Sources */,
 				E31BEDB1225B3FFF005D1AEA /* ViewController.swift in Sources */,
 				E31BEDC5225B6B0B005D1AEA /* NumberGenerator.swift in Sources */,
 				E31BEDAF225B3FFF005D1AEA /* AppDelegate.swift in Sources */,
