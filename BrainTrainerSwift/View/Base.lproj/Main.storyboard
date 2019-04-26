@@ -10,42 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Difficulty Controller-->
         <scene sceneID="Une-K3-PQs">
             <objects>
-                <viewController id="lnt-Fi-Xnr" sceneMemberID="viewController">
+                <viewController id="lnt-Fi-Xnr" customClass="DifficultyController" customModule="BrainTrainerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q9q-oW-4ae">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW5-F1-zYf">
-                                <rect key="frame" x="191" y="198" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Easy"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zpm-pF-v4f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N56-C6-UbI">
-                                <rect key="frame" x="180" y="265" width="55" height="30"/>
+                                <rect key="frame" x="180" y="304" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Medium"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="X0F-6V-txf"/>
+                                    <action selector="ClickedOnButton:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="WRQ-eI-aJb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7g4-uB-thK">
-                                <rect key="frame" x="191" y="353" width="34" height="30"/>
+                                <rect key="frame" x="190" y="383" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hard"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="20d-06-T7p"/>
+                                    <action selector="ClickedOnButton:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="mG6-IF-xKd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW5-F1-zYf">
+                                <rect key="frame" x="191" y="223" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Easy"/>
+                                <connections>
+                                    <action selector="ClickedOnButton:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="0Ax-v1-hxJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4eH-jn-Vwo"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToGame" id="49T-vo-ZcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOq-4s-Zzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +171,4 @@
             <point key="canvasLocation" x="121.73913043478262" y="104.34782608695653"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zpm-pF-v4f"/>
-    </inferredMetricsTieBreakers>
 </document>

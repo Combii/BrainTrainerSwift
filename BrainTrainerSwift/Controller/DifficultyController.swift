@@ -16,7 +16,39 @@ class DifficultyController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func ClickedOnButton(_ sender: UIButton) {
+    
+        let difficultySelected = sender.titleLabel!.text!
+    
+        if(difficultySelected == "Hard"){
+            sendDifficultyToGame(difficulty: "Hard")
+        }
+        else if(difficultySelected == "Medium"){
+            sendDifficultyToGame(difficulty: "Medium")
+        }
+        else if(difficultySelected == "Easy"){
+            sendDifficultyToGame(difficulty: "Easy")
+        }
+        
+    }
+    
+    func sendDifficultyToGame(difficulty:String
+        ) {
+        performSegue(withIdentifier: "goToGame", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGame"{
+            
+            let destinationVC = segue.destination as! ViewController
+            
+            //destinationVC.textPassedOver = textField.text!
+            
+        }
+    }
 
+    
     /*
     // MARK: - Navigation
 
