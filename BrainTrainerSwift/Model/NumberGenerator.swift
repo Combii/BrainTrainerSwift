@@ -80,6 +80,24 @@ struct NumberGenerator{
         return ""
     }
     
+//    mutating func generateMultiplicationQuestion() -> String   {
+//
+//        if let numberResult = numbersDictionary![String(Int.random(in: 1 ... 4))]{
+//
+//            print("RESULT NUMBER: \(numberResult)")
+//
+//            let toMultiply = numberResult / Int.random(in:1...numberResult)
+//            let subtractred = numberResult  toMultiply;
+//
+//            correctAnswer = numberResult
+//
+//            return "\(subtractred) + \(toSubtract)"
+//        }
+//        return ""
+//    }
+    
+    
+    
     mutating func generateSubtractionQuestion() -> String   {
         
         if let numberResult = numbersDictionary![String(Int.random(in: 1 ... 4))]{

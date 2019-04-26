@@ -77,12 +77,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="timerLabel" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Timer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJU-L8-L7m">
-                                <rect key="frame" x="331" y="25" width="58" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-Hh-WOm" userLabel="Score Label">
                                 <rect key="frame" x="19.999999999999996" y="30" width="41.666666666666657" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,18 +89,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3s-KZ-2AD">
+                                <rect key="frame" x="352" y="30" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="w3s-KZ-2AD" firstAttribute="centerY" secondItem="b9s-Hh-WOm" secondAttribute="centerY" id="58Q-AS-9v6"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6qc-4y-Xb6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJU-L8-L7m" secondAttribute="centerX" multiplier="1.15" id="BKE-eB-ekN"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Caq-IN-hrk"/>
                             <constraint firstItem="b9s-Hh-WOm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DyR-Wa-vab"/>
                             <constraint firstItem="DY3-U3-SQy" firstAttribute="centerX" secondItem="urd-au-mup" secondAttribute="centerX" id="E4z-wr-7eW"/>
                             <constraint firstItem="b9s-Hh-WOm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="WOr-ct-5HS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="WJU-L8-L7m" secondAttribute="top" multiplier="0.8" id="cOF-AZ-AOm"/>
+                            <constraint firstItem="w3s-KZ-2AD" firstAttribute="trailing" secondItem="urd-au-mup" secondAttribute="trailing" id="WRM-GA-45k"/>
                             <constraint firstItem="DY3-U3-SQy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="eff-Pj-D2b"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="kx9-md-g1r"/>
+                            <constraint firstItem="w3s-KZ-2AD" firstAttribute="firstBaseline" secondItem="b9s-Hh-WOm" secondAttribute="firstBaseline" id="lN5-Sx-OQ3"/>
                             <constraint firstItem="urd-au-mup" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="x2n-za-uvz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -118,7 +119,7 @@
                         <outlet property="bt4" destination="Yw3-QT-THt" id="tTB-Qn-sqE"/>
                         <outlet property="questionProblemLabel" destination="DY3-U3-SQy" id="XsK-1U-OE3"/>
                         <outlet property="score" destination="b9s-Hh-WOm" id="aJK-Bl-4wK"/>
-                        <outlet property="timerLabel" destination="WJU-L8-L7m" id="49I-Gh-FgC"/>
+                        <outlet property="timerLabel" destination="w3s-KZ-2AD" id="mqm-JI-I78"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

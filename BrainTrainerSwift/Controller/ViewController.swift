@@ -10,9 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    
-    @IBOutlet weak var timerLabel: UITextField!
-    
+
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var score: UILabel!
     
@@ -34,9 +33,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startGame()
+    }
+    
+    func startGame() {
         score.text = "0/\(String(amountOfQuestionsCounter))"
-
-        //runTimer()
+        
+        runTimer()
         newQuestion()
     }
     
@@ -81,7 +84,33 @@ class ViewController: UIViewController {
     
     @objc func updateTimer() {
         seconds -= 1     //This will decrement(count down)the seconds.
+        
+        stopAndResetTimer();
+        resetGame();
+        
         timerLabel.text = "\(seconds)" //This will update the label.
+    }
+    
+    func resetGame() {
+        let alert = UIAlertController(title: "Play again?", message: "Do you wan't to play again?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            self.startGame()
+        }))
+        
+        
+        self.present(alert, animated: true)
+    }
+    
+    func stopAndResetTimer() {
+        
+       seconds = 60 //This will update the label.
+       timer.invalidate()
+        
+
+        
+        
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
