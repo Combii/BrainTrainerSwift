@@ -15,13 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     
     var difficultyPassedOver : String?
-
+    var difficultyNumber = 10
     
-    var seconds = 60
+    //Set timer length
+    var seconds = 5
     var timer = Timer()
     var isTimerRunning = false
     
-    var numberGenerator = NumberGenerator()
+    var numberGenerator = NumberGenerator(difficultySelected: 10)
     
     @IBOutlet weak var bt4: UIButton!
     @IBOutlet weak var bt3: UIButton!
@@ -35,7 +36,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDifficulty()
         startGame()
+    }
+    
+    func setupDifficulty() {
+        if(difficultyPassedOver == "Hard"){
+            difficultyNumber = 30
+        }
+        else if(difficultyPassedOver == "Medium"){
+            difficultyNumber = 20
+        }
+        else if(difficultyPassedOver == "Easy"){
+            difficultyNumber = 10
+        }
     }
     
     func startGame() {
@@ -50,7 +64,7 @@ class ViewController: UIViewController {
     
     func newQuestion() {
        
-        numberGenerator = NumberGenerator()
+        numberGenerator = NumberGenerator(difficultySelected: difficultyNumber)
         
         questionProblemLabel.text = numberGenerator.questionProblem
         setNumbers(numberDic: numberGenerator.numbersDictionary!)

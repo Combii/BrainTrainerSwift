@@ -17,11 +17,11 @@ struct NumberGenerator{
     
     var maxNumber: Int
     
-    init() {
+    init(difficultySelected : Int) {
         numbersDictionary = ["1": 0, "2": 0, "3": 0, "4": 0]
         questionProblem = ""
         correctAnswer = 0
-        maxNumber = 10
+        maxNumber = difficultySelected
         
         generateNumbers()
         questionProblem = generateNewQuestion()
