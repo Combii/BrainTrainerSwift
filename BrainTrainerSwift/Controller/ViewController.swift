@@ -37,6 +37,7 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
+        amountOfQuestionsCounter = 0
         score.text = "0/\(String(amountOfQuestionsCounter))"
         
         runTimer()
@@ -85,9 +86,12 @@ class ViewController: UIViewController {
     @objc func updateTimer() {
         seconds -= 1     //This will decrement(count down)the seconds.
         
+        if(seconds == 0){
         stopAndResetTimer();
         resetGame();
-        
+        }
+            
+            
         timerLabel.text = "\(seconds)" //This will update the label.
     }
     
