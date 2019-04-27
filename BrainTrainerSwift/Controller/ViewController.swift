@@ -116,7 +116,9 @@ class ViewController: UIViewController {
     func resetGame() {
         let alert = UIAlertController(title: "Play again?", message: "Do you wan't to play again?", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
             self.startGame()
         }))
