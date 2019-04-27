@@ -105,7 +105,8 @@ class ViewController: UIViewController {
         seconds -= 1     //This will decrement(count down)the seconds.
         
         if(seconds == 0){
-        stopAndResetTimer();
+        saveHighScoreLocalStorage()
+        stopAndResetTimer()
         resetGame();
         }
             
@@ -157,6 +158,10 @@ class ViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(array, forKey: "SavedHighScoreArray")
         
+        let defaults2 = UserDefaults.standard
+        let array2 = defaults2.array(forKey: "SavedHighScoreArray")  as? [Int] ?? [Int]()
+        
+        print("TEST : \(array2)")
     }
     
 }
