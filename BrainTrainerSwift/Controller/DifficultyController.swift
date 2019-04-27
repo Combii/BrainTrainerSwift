@@ -33,12 +33,21 @@ class DifficultyController: UIViewController {
         }
         
     }
+        
+    
+    @IBAction func highscoreButtonClicked(_ sender: UIButton) {
+        if(difficultySelected == sender.titleLabel!.text!){
+            changeToHighScoreView()
+        }
+    }
+    
+    func changeToHighScoreView() {
+        performSegue(withIdentifier: "goToGame", sender: self)
+    }
     
     func sendDifficultyToGame() {
         performSegue(withIdentifier: "goToGame", sender: self)
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGame"{
             

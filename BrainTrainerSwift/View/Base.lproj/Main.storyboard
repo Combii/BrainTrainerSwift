@@ -42,17 +42,30 @@
                                     <action selector="ClickedOnButton:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="0Ax-v1-hxJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcB-vp-e6i">
+                                <rect key="frame" x="168" y="469" width="78" height="30"/>
+                                <state key="normal" title="Highscores"/>
+                                <connections>
+                                    <action selector="ClickedOnButton:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="Y0W-Bi-G7V"/>
+                                    <action selector="highscoreButtonClicked:" destination="lnt-Fi-Xnr" eventType="touchUpInside" id="iVX-IW-IVk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4eH-jn-Vwo" firstAttribute="trailing" secondItem="ZcB-vp-e6i" secondAttribute="trailing" constant="168" id="dkh-eH-IwN"/>
+                            <constraint firstItem="ZcB-vp-e6i" firstAttribute="leading" secondItem="4eH-jn-Vwo" secondAttribute="leading" constant="168" id="eki-71-SMi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4eH-jn-Vwo"/>
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToGame" id="49T-vo-ZcD"/>
+                        <segue destination="Jry-Cs-ofF" kind="show" identifier="goToHighscores" id="gwB-O5-ofE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOq-4s-Zzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586" y="104"/>
+            <point key="canvasLocation" x="-922" y="104"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -169,6 +182,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="104.34782608695653"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="bEu-H3-PjE">
+            <objects>
+                <tableViewController id="Jry-Cs-ofF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cDx-Vk-l2F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZnS-lA-qE4">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZnS-lA-qE4" id="yUA-v0-pNH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jry-Cs-ofF" id="LcU-hR-ImV"/>
+                            <outlet property="delegate" destination="Jry-Cs-ofF" id="Qi3-AO-CxG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6h-1d-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="-576"/>
         </scene>
     </scenes>
 </document>
