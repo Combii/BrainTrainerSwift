@@ -128,13 +128,8 @@ class ViewController: UIViewController {
     }
     
     func stopAndResetTimer() {
-        
        seconds = 60 //This will update the label.
        timer.invalidate()
-        
-
-        
-        
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
@@ -153,6 +148,15 @@ class ViewController: UIViewController {
         
         
         newQuestion()
+    }
+    
+    func saveHighScoreLocalStorage() {
+        
+        let array = [correctQuestionsCounter]
+        
+        let defaults = UserDefaults.standard
+        defaults.set(array, forKey: "SavedHighScoreArray")
+        
     }
     
 }
