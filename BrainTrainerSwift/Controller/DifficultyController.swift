@@ -42,12 +42,13 @@ class DifficultyController: UIViewController {
     }
     
     func changeToHighScoreView() {
-        performSegue(withIdentifier: "goToGame", sender: self)
+        performSegue(withIdentifier: "goToHighscores", sender: self)
     }
     
     func sendDifficultyToGame() {
         performSegue(withIdentifier: "goToGame", sender: self)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGame"{
             

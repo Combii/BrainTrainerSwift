@@ -14,6 +14,7 @@
 		E31BEDB6225B4000005D1AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB5225B4000005D1AEA /* Assets.xcassets */; };
 		E31BEDB9225B4000005D1AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB7225B4000005D1AEA /* LaunchScreen.storyboard */; };
 		E31BEDC5225B6B0B005D1AEA /* NumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDC4225B6B0B005D1AEA /* NumberGenerator.swift */; };
+		E37EAC7722747C0400CDAE5D /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37EAC7622747C0400CDAE5D /* HighScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E31BEDB8225B4000005D1AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E31BEDBA225B4000005D1AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E31BEDC4225B6B0B005D1AEA /* NumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGenerator.swift; sourceTree = "<group>"; };
+		E37EAC7622747C0400CDAE5D /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
 				E3179A1022733E5100147625 /* DifficultyController.swift */,
+				E37EAC7622747C0400CDAE5D /* HighScoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3179A1122733E5100147625 /* DifficultyController.swift in Sources */,
+				E37EAC7722747C0400CDAE5D /* HighScoreViewController.swift in Sources */,
 				E31BEDB1225B3FFF005D1AEA /* ViewController.swift in Sources */,
 				E31BEDC5225B6B0B005D1AEA /* NumberGenerator.swift in Sources */,
 				E31BEDAF225B3FFF005D1AEA /* AppDelegate.swift in Sources */,
