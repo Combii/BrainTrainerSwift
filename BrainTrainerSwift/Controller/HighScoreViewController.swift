@@ -44,7 +44,7 @@ class HighScoreViewController: UITableViewController {
         
         let dateformatter = DateFormatter()
         
-        dateformatter.dateFormat = "MM/dd/yy h:mm a Z"
+        dateformatter.dateFormat = "MM/dd/yy"
         
         let now = dateformatter.string(from: highScore.date)
         
@@ -56,6 +56,7 @@ class HighScoreViewController: UITableViewController {
     
     
 }
+
 
 class HighScoreTableViewCell: UITableViewCell {
     
