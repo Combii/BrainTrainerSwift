@@ -58,9 +58,7 @@ class ViewController: UIViewController {
         
         runTimer()
         newQuestion()
-        
-        print("!!!!difficultyPassedOver!!!!! : " + difficultyPassedOver!)
-    }
+        }
     
     func newQuestion() {
        
@@ -153,15 +151,13 @@ class ViewController: UIViewController {
     
     func saveHighScoreLocalStorage() {
         
-        let array = [correctQuestionsCounter]
+        let highScore = HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date())
+        
+        
+        let array = [highScore]
         
         let defaults = UserDefaults.standard
         defaults.set(array, forKey: "SavedHighScoreArray")
-        
-        let defaults2 = UserDefaults.standard
-        let array2 = defaults2.array(forKey: "SavedHighScoreArray")  as? [Int] ?? [Int]()
-        
-        print("TEST : \(array2)")
     }
     
 }

@@ -21,13 +21,9 @@ class HighScoreViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let highScore1 = HighScore(score: 20, difficulty: "Easy", date: Date())
-        let highScore2 = HighScore(score: 20, difficulty: "Hard", date: Date())
+        let defaults2 = UserDefaults.standard
+        highScores = defaults2.array(forKey: "SavedHighScoreArray")  as? [HighScore] ?? [HighScore]()
         
-        
-        highScores = [highScore1,highScore2]
-
-
     }
     
     
