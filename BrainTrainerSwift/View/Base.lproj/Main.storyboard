@@ -224,6 +224,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="H9H-bb-DG8" id="l1L-Sf-94l"/>
+                                    <outlet property="difficultyLabel" destination="Ue4-Th-vvB" id="dwo-zW-dIN"/>
+                                    <outlet property="scoreLabel" destination="X8l-Hm-nU2" id="Yda-xJ-Ktx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -232,9 +237,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="difficultyLabel" destination="Ue4-Th-vvB" id="VUk-fs-9H1"/>
                         <outlet property="highScoreTableView" destination="cDx-Vk-l2F" id="Jg6-Rh-ou1"/>
-                        <outlet property="score" destination="X8l-Hm-nU2" id="0uY-iv-0zL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6h-1d-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,7 +20,7 @@ class HighScoreViewController: UITableViewController {
         
         let highScore1 = HighScore(score: 20
             , difficulty: "Easy"
-            , date: NSDate())
+            , date: Date())
         
         
         highScores = [highScore1]
@@ -30,18 +30,26 @@ class HighScoreViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! HighScoreTableViewCell
         
         let highScore = highScores[indexPath.row]
-        cell.scoreLabel?.text = highScore.score
+        cell.scoreLabel?.text = String(highScore.score)
         cell.difficultyLabel?.text = highScore.difficulty
-        cell.dateLabel?.text = highScore.date
+        
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM/dd/yy h:mm a Z"
+        
+        let now = dateformatter.string(from: highScore.date)
+        
+        
+        cell.dateLabel?.text = now
         
         return cell
     }
@@ -51,6 +59,12 @@ class HighScoreViewController: UITableViewController {
 
 class HighScoreTableViewCell: UITableViewCell {
     
-  
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var difficultyLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
     
 }
