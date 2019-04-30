@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" id="ZnS-lA-qE4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" id="ZnS-lA-qE4" customClass="HighScoreTableViewCell" customModule="BrainTrainerSwift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZnS-lA-qE4" id="yUA-v0-pNH">
@@ -232,11 +232,9 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="dateLabel" destination="H9H-bb-DG8" id="9rZ-ik-CI9"/>
                         <outlet property="difficultyLabel" destination="Ue4-Th-vvB" id="VUk-fs-9H1"/>
                         <outlet property="highScoreTableView" destination="cDx-Vk-l2F" id="Jg6-Rh-ou1"/>
                         <outlet property="score" destination="X8l-Hm-nU2" id="0uY-iv-0zL"/>
-                        <outlet property="scoreLabel" destination="X8l-Hm-nU2" id="YMh-eP-zDf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6h-1d-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>

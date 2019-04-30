@@ -12,14 +12,9 @@ class HighScoreViewController: UITableViewController {
    
     @IBOutlet var highScoreTableView: UITableView!
     
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    
     var highScores = [HighScore]()
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,5 +46,11 @@ class HighScoreViewController: UITableViewController {
         return cell
     }
     
+    
+}
+
+class HighScoreTableViewCell: UITableViewCell {
+    
+  
     
 }
