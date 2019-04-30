@@ -12,9 +12,9 @@ struct HighScore{
     
     var score : Int
     var difficulty : String
-    var date : Date
+    var date : NSDate
 
-    init(score : Int, difficulty : String, date : Date) {
+    init(score : Int, difficulty : String, date : NSDate) {
         self.score = score
         self.difficulty = difficulty
         self.date = date
