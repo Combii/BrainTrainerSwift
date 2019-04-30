@@ -24,12 +24,7 @@ class HighScoreViewController: UIViewController {
         
         let storedObject: Data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as! Data
         highScores = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
-        
-        
-        /*
-        let defaults2 = UserDefaults.standard
-        highScores = defaults2.array(forKey: "SavedHighScoreArray")  as? [HighScore] ?? [HighScore]()
-        */
+
     }
     
     

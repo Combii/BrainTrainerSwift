@@ -151,19 +151,14 @@ class ViewController: UIViewController {
     
     func saveHighScoreLocalStorage() {
         
-        var highScoreArr = [HighScore]()
-        
+        if(correctQuestionsCounter != 0){
+        let storedObject: Data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as! Data
+        var highScoreArr = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
+
         highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
         
-        
         UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
-
-        /*
-        let array = [highScore]
-        
-        let defaults = UserDefaults.standard
-        defaults.set(array, forKey: "SavedHighScoreArray")
-        */
+        }
     }
     
 }
