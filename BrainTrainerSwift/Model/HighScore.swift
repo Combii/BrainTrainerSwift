@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HighScore{
+struct HighScore: Codable {
     
     var score : Int
     var difficulty : String
