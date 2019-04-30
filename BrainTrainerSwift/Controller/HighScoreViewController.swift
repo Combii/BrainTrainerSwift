@@ -12,6 +12,10 @@ class HighScoreViewController: UITableViewController {
    
     @IBOutlet var highScoreTableView: UITableView!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     var highScores = [HighScore]()
     
     
@@ -39,7 +43,10 @@ class HighScoreViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         
-        cell.textLabel?.text = "Score \(highScores[0].score) Difficulty \(highScores[0].difficulty) Date \(highScores[0].date)"
+        let highScore = highScores[indexPath.row]
+        cell.scoreLabel?.text = highScore.score
+        cell.difficultyLabel?.text = highScore.difficulty
+        cell.dateLabel?.text = highScore.date
         
         return cell
     }
