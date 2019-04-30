@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HighScoreViewController: UITableViewController {
+class HighScoreViewController: UIViewController {
    
-    @IBOutlet var highScoreTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var highScores = [HighScore]()
     
@@ -18,23 +18,33 @@ class HighScoreViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let highScore1 = HighScore(score: 20
-            , difficulty: "Easy"
-            , date: Date())
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let highScore1 = HighScore(score: 20, difficulty: "Easy", date: Date())
+        let highScore2 = HighScore(score: 20, difficulty: "Hard", date: Date())
         
         
-        highScores = [highScore1]
+        highScores = [highScore1,highScore2]
 
 
     }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
+  
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+}
+
+extension HighScoreViewController: UITableViewDataSource,UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return highScores.count
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! HighScoreTableViewCell
         
@@ -53,7 +63,6 @@ class HighScoreViewController: UITableViewController {
         
         return cell
     }
-    
     
 }
 
