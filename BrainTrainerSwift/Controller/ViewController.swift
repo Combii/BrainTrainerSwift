@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var difficultyNumber = 10
     
     //Set timer length
-    var seconds = 5
+    var seconds = 20
     var timer = Timer()
     var isTimerRunning = false
     
@@ -38,7 +38,37 @@ class ViewController: UIViewController {
         
         setupDifficulty()
         startGame()
+        
+        
+        //stackoverflow.com/questions/34744783/detect-ios-app-entering-background
+        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
+    
+    @objc func willResignActive(_ notification: Notification) {
+        pauseStartTimer()
+        
+        print("!!!!!!!IS IN WILLRESIGNACTIVE!!!!!!!")
+    }
+    
+    @objc func applicationDidBecomeActive(_ notification: Notification) {
+        pauseStartTimer()
+        
+        print("!!!!!!!IS IN applicationDidBecomeActive!!!!!!!")
+    }
+    
+    func pauseStartTimer(){
+        if (!timer.isValid) {
+            print("!!!!!!!IS IN RUN TIMER!!!!!!!")
+            
+            runTimer()
+        }
+        else{
+            timer.invalidate()
+        }
+    }
+    
     
     func setupDifficulty() {
         if(difficultyPassedOver == "Hard"){
