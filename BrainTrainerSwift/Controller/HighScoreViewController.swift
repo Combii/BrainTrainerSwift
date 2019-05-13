@@ -9,12 +9,12 @@
 import UIKit
 
 class HighScoreViewController: UIViewController {
-   
+    
     @IBOutlet weak var tableView: UITableView!
     
     var highScores = [HighScore]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,18 +22,17 @@ class HighScoreViewController: UIViewController {
         tableView.dataSource = self
         
         
+        //Get highscores
         guard let data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as? Data
-            
             else {
                 return
         }
         
         highScores = try! PropertyListDecoder().decode([HighScore].self, from: data)
-
     }
     
     
-  
+    
     
     
 }

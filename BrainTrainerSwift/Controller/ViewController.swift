@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
-
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var score: UILabel!
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionProblemLabel: UILabel!
     var amountOfQuestionsCounter = 0
     var correctQuestionsCounter = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,10 +58,10 @@ class ViewController: UIViewController {
         
         runTimer()
         newQuestion()
-        }
+    }
     
     func newQuestion() {
-       
+        
         numberGenerator = NumberGenerator(difficultySelected: difficultyNumber)
         
         questionProblemLabel.text = numberGenerator.questionProblem
@@ -103,12 +103,12 @@ class ViewController: UIViewController {
         seconds -= 1     //This will decrement(count down)the seconds.
         
         if(seconds == 0){
-        saveHighScoreLocalStorage()
-        stopAndResetTimer()
-        resetGame();
+            saveHighScoreLocalStorage()
+            stopAndResetTimer()
+            resetGame();
         }
-            
-            
+        
+        
         timerLabel.text = "\(seconds)" //This will update the label.
     }
     
@@ -127,8 +127,8 @@ class ViewController: UIViewController {
     }
     
     func stopAndResetTimer() {
-       seconds = 60 //This will update the label.
-       timer.invalidate()
+        seconds = 60 //This will update the label.
+        timer.invalidate()
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
@@ -151,15 +151,24 @@ class ViewController: UIViewController {
     
     func saveHighScoreLocalStorage() {
         
-        if(correctQuestionsCounter != 0){
-        guard let storedObject: Data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as? Data
-            else {return}
-            
-        var highScoreArr = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
-
-        highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
         
-        UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
+        
+        if(correctQuestionsCounter != 0){
+            guard let storedObject: Data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as? Data
+                else {
+                    var highScoreArr = [HighScore]()
+                    highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
+                    
+                    UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
+                    
+                    return
+            }
+            
+            var highScoreArr = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
+            
+            highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
+            
+            UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
         }
     }
     
