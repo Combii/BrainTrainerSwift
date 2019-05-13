@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E3179A1122733E5100147625 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3179A1022733E5100147625 /* DifficultyController.swift */; };
 		E31BEDAF225B3FFF005D1AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */; };
-		E31BEDB1225B3FFF005D1AEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDB0225B3FFF005D1AEA /* ViewController.swift */; };
+		E31BEDB1225B3FFF005D1AEA /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BEDB0225B3FFF005D1AEA /* GameController.swift */; };
 		E31BEDB4225B3FFF005D1AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB2225B3FFF005D1AEA /* Main.storyboard */; };
 		E31BEDB6225B4000005D1AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB5225B4000005D1AEA /* Assets.xcassets */; };
 		E31BEDB9225B4000005D1AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31BEDB7225B4000005D1AEA /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		E3179A1022733E5100147625 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		E31BEDAB225B3FFF005D1AEA /* BrainTrainerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTrainerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31BEDAE225B3FFF005D1AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E31BEDB0225B3FFF005D1AEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E31BEDB0225B3FFF005D1AEA /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		E31BEDB3225B3FFF005D1AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E31BEDB5225B4000005D1AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E31BEDB8225B4000005D1AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		E31BEDC0225B5B77005D1AEA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E31BEDB0225B3FFF005D1AEA /* ViewController.swift */,
+				E31BEDB0225B3FFF005D1AEA /* GameController.swift */,
 				E3179A1022733E5100147625 /* DifficultyController.swift */,
 				E37EAC7622747C0400CDAE5D /* HighScoreViewController.swift */,
 			);
@@ -173,7 +173,7 @@
 			files = (
 				E3179A1122733E5100147625 /* DifficultyController.swift in Sources */,
 				E37EAC7722747C0400CDAE5D /* HighScoreViewController.swift in Sources */,
-				E31BEDB1225B3FFF005D1AEA /* ViewController.swift in Sources */,
+				E31BEDB1225B3FFF005D1AEA /* GameController.swift in Sources */,
 				E31BEDC5225B6B0B005D1AEA /* NumberGenerator.swift in Sources */,
 				E39275B8227844A9008E38CD /* HighScore.swift in Sources */,
 				E31BEDAF225B3FFF005D1AEA /* AppDelegate.swift in Sources */,

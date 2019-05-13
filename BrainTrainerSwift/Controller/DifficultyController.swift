@@ -52,7 +52,7 @@ class DifficultyController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGame"{
             
-            let destinationVC = segue.destination as! ViewController
+            let destinationVC = segue.destination as! GameController
             
             destinationVC.difficultyPassedOver = difficultySelected
             

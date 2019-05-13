@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameController: UIViewController {
     
     
     @IBOutlet weak var timerLabel: UILabel!
@@ -126,7 +126,7 @@ class ViewController: UIViewController {
     }
     
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(GameController.updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
@@ -186,20 +186,21 @@ class ViewController: UIViewController {
         if(correctQuestionsCounter != 0){
             guard let storedObject: Data = UserDefaults.standard.object(forKey: "SavedHighScoreArray") as? Data
                 else {
-                    var highScoreArr = [HighScore]()
-                    highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
-                    
-                    UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
-                    
+                    let highScoreArr = [HighScore]()
+                    saveWithUserDefaults(highScoreArr: highScoreArr)
                     return
             }
             
-            var highScoreArr = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
-            
-            highScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
-            
-            UserDefaults.standard.set(try! PropertyListEncoder().encode(highScoreArr), forKey: "SavedHighScoreArray")
+            let highScoreArr = try! PropertyListDecoder().decode([HighScore].self, from: storedObject)
+            saveWithUserDefaults(highScoreArr: highScoreArr)
         }
+    }
+    
+    func saveWithUserDefaults(highScoreArr : [HighScore]){
+        var tempHighScoreArr = highScoreArr
+        
+        tempHighScoreArr.append(HighScore(score: correctQuestionsCounter, difficulty: String(difficultyPassedOver!), date: Date()))
+        UserDefaults.standard.set(try! PropertyListEncoder().encode(tempHighScoreArr), forKey: "SavedHighScoreArray")
     }
     
 }
